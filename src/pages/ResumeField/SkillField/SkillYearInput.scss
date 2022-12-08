@@ -1,0 +1,22 @@
+.skill-year-input {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    width: 300px;
+
+    .placeholder {
+        font-size: 16px;
+        color: #888888;
+    }
+
+    .increase-btn,
+    .decrease-btn {
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    .value {
+        font-size: 40px;
+    }
+}

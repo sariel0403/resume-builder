@@ -3,13 +3,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './assets/style/App.scss';
 
-import HomePage from './pages/HomePage';
+import Layout from './pages/Layout';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Layout />} />
       </Routes>
     </BrowserRouter>
   );

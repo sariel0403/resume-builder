@@ -1,0 +1,19 @@
+.badge {
+    position: absolute;
+    // transform: translate(-50%, 50%);
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: lightblue;
+    border-radius: 10px;
+    line-height: 100%;
+    font-weight: 400;
+
+
+
+    p {
+        margin-top: 2px;
+        text-align: center;
+    }
+}

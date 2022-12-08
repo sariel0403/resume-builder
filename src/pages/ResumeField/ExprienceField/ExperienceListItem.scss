@@ -1,0 +1,12 @@
+.experience-list-item {
+    width: 700px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0px 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1),
+        0 4px 4px 0 rgba(0, 0, 0, 0.3);
+
+    p {
+        margin: 10px;
+    }
+}

@@ -1,0 +1,16 @@
+.skill-title-input {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+
+    label {
+        input {
+            border: none;
+            outline: none;
+            border-bottom: 1px solid black;
+            width: 270px;
+            margin-right: 10px;
+        }
+    }
+}

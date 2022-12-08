@@ -1,0 +1,17 @@
+.layout {
+    padding: 0px 20px;
+
+    box-shadow: 0 12px 8px 0 rgba(0, 0, 0, 0.01),
+        0 6px 20px 0 rgba(0, 0, 0, 0.2);
+
+    .active {
+        font-weight: bold;
+        border-bottom: 3px solid black;
+    }
+
+    .menu-item {
+        position: relative;
+        padding: 25px 25px;
+        cursor: pointer;
+    }
+}

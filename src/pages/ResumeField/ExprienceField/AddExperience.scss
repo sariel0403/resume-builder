@@ -1,0 +1,22 @@
+.add-experience {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 700px;
+
+    input {
+        outline: none;
+        border: none;
+    }
+
+    .experience-input {
+        border-bottom: 1px solid black;
+        width: 500px;
+    }
+
+    .date-input-field {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+    }
+}

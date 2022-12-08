@@ -1,0 +1,14 @@
+.text-input {
+    border: 1px solid black;
+    width: 300px;
+    border-radius: 7px;
+    padding: 15px 10px;
+    background-color: pink;
+
+    input {
+        background-color: pink;
+        width: 300px;
+        border: none;
+        outline: none;
+    }
+}
