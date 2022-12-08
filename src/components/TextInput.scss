@@ -1,14 +1,15 @@
 .text-input {
     border: 1px solid black;
-    width: 300px;
+    width: 350px;
     border-radius: 7px;
     padding: 15px 10px;
-    background-color: pink;
+    background-color: rgb(233, 233, 233);
 
     input {
-        background-color: pink;
-        width: 300px;
+        background-color: rgb(233, 233, 233);
+        width: 350px;
         border: none;
         outline: none;
+        border-bottom: 1px solid black;
     }
 }

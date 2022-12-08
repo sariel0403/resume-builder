@@ -1,17 +1,25 @@
 import React from "react";
 
 import SkillTitleInput from "./SkillTitleInput";
-import SkillLevelInput from "./SkillLevelInput";
-import SkillYearInput from "./SkillYearInput";
+import SkillRating from "./SkillRate";
+import AddButton from "../../../components/AddButton";
 
 import './SkillField.scss';
 
 const SkillField = () => {
     return (
-        <div>
-            <SkillTitleInput />
-            <SkillLevelInput />
-            <SkillYearInput />
+        <div className="skill-field">
+            <div className="skill-field-heading">
+                <p>Skills</p>
+                <hr></hr>
+            </div>
+            <div className="inline justify-content-space-between">
+                <SkillTitleInput />
+                <SkillRating />
+            </div>
+            <div className="inline h-center mt-10">
+                <AddButton />
+            </div>
         </div>
     );
 }

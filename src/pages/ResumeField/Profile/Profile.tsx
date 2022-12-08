@@ -7,11 +7,19 @@ import './Profile.scss';
 
 const Profile = () => {
     return (
-        <div>
-            <Avatar />
-            <TextInput placeholder="Name" />
-            <TextInput placeholder="Family" />
-            <TextInput placeholder="Profession Title" />
+        <div className="profile-field">
+            <div className="avatar-field inline h-center">
+                <Avatar />
+            </div>
+            <div className="name-field">
+                <TextInput placeholder="Name" />
+            </div>
+            <div className="family-field">
+                <TextInput placeholder="Family" />
+            </div>
+            <div className="profession-title-field">
+                <TextInput placeholder="Profession Title" />
+            </div>
         </div>
     );
 }

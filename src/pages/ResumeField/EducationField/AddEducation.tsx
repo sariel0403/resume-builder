@@ -8,9 +8,9 @@ const AddEducation = (props: any) => {
     const [value, setValue] = useState('');
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        // 👇 Get input value from "event"
         setValue(event.target.value);
     };
+
     const handleAddEducation = (event: React.MouseEvent<HTMLElement>) => {
         props.addEducation(value);
     }
@@ -18,7 +18,7 @@ const AddEducation = (props: any) => {
     return (
         <div className='add-education inline justify-content-space-between'>
             <input value={value} onChange={handleChange} />
-            <AddButton onClick={handleAddEducation} />
+            <AddButton onClick={(e: any) => handleAddEducation(e)} />
         </div>
     );
 }

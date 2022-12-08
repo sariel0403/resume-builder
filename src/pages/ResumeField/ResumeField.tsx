@@ -9,11 +9,23 @@ import './ResumeField.scss';
 
 const ResumeField = () => {
     return (
-        <div>
-            <Profile />
-            <EducationField />
-            <ExperienceField />
-            <SkillField />
+        <div className="resume-field inline h-center">
+            <div className="profile-skill">
+                <div className="profile">
+                    <Profile />
+                </div>
+                <div className="skill">
+                    <SkillField />
+                </div>
+            </div>
+            <div className="education-experience">
+                <div className="education">
+                    <EducationField />
+                </div>
+                <div className="experience">
+                    <ExperienceField />
+                </div>
+            </div>
         </div>
     );
 }

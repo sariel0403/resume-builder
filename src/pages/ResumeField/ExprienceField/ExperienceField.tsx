@@ -12,13 +12,13 @@ const ExperienceField = () => {
         let newExperienceList: string[] = [...experienceList];
         newExperienceList.push(experienceListItem);
         setExperienceList(newExperienceList);
-        console.log("HERE");
     }
 
     return (
         <div className="experience-field">
             <div className="experience-field-heading">
                 <p>Experiences</p>
+                <hr></hr>
             </div>
             <AddExperience />
             {/* {experienceList.map((experienceListItem: string) => {
