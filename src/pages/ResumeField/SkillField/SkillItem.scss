@@ -1,0 +1,16 @@
+.skill-item {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 25px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1),
+        0 4px 4px 0 rgba(0, 0, 0, 0.3);
+
+    &-skill {
+        margin-right: 30px;
+        width: 60px;
+    }
+
+    &-rate {
+        margin-right: 30px;
+    }
+}

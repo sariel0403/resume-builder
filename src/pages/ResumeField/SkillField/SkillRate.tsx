@@ -20,9 +20,12 @@ function getLabelText(value: number) {
     return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
 }
 
-export default function SkillRating() {
-    const [value, setValue] = React.useState<number | null>(2);
+export default function SkillRating(props: any) {
+    const [value, setValue] = React.useState<number>(2);
     const [hover, setHover] = React.useState(-1);
+    React.useEffect(() => {
+        props.setRate(value, labels[value]);
+    }, [value]);
 
     return (
         <Box
@@ -38,7 +41,8 @@ export default function SkillRating() {
                 precision={0.5}
                 getLabelText={getLabelText}
                 onChange={(event, newValue) => {
-                    setValue(newValue);
+                    if (newValue != null)
+                        setValue(newValue);
                 }}
                 onChangeActive={(event, newHover) => {
                     setHover(newHover);

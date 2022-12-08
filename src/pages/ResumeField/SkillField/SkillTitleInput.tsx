@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Autocomplete from '@mui/material/Autocomplete';
 import { HiMagnifyingGlass } from 'react-icons/hi2';
 
@@ -6,7 +6,11 @@ import './SkillTitleInput.scss';
 
 const options = ['React', 'Angular', 'Vue'];
 
-const SkillTitleInput = () => {
+const SkillTitleInput = (props: any) => {
+    const [skill, setSkill] = useState<string>('');
+    useEffect(() => {
+        props.setSkill(skill);
+    }, [skill]);
     return (
         <div className="skill-title-input inline justify-content-space-between">
             <div className="inline v-center">
@@ -23,11 +27,15 @@ const SkillTitleInput = () => {
                         }}
                         id="custom-input-demo"
                         options={options}
-                        renderInput={(params) => (
-                            <div ref={params.InputProps.ref}>
+                        renderInput={(params) => {
+                            if (params.inputProps.value === undefined)
+                                setSkill("");
+                            else
+                                setSkill(params.inputProps.value.toString());
+                            return (<div ref={params.InputProps.ref}>
                                 <input type="text" {...params.inputProps} placeholder="Skill Title" />
-                            </div>
-                        )}
+                            </div>)
+                        }}
                     />
                 </label>
             </div>
