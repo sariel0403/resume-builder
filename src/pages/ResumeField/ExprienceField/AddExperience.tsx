@@ -7,13 +7,23 @@ import './AddExperience.scss';
 
 const AddExperience = (props: any) => {
     const [value, setValue] = useState('');
+    const [from, setFrom] = useState('');
+    const [till, setTill] = useState('');
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setValue(event.target.value);
     };
 
-    const handleAddEducation = (event: React.MouseEvent<HTMLElement>) => {
-        props.addEducation(value);
+    const handleChangeFrom = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setFrom(event.target.value);
+    }
+
+    const handleChangeTill = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setTill(event.target.value);
+    }
+
+    const handleAddExperience = (event: React.MouseEvent<HTMLElement>) => {
+        props.addExperience(value, from, till);
     }
 
     return (
@@ -26,7 +36,7 @@ const AddExperience = (props: any) => {
                     <div className="v-center"><p>From</p></div>
                     <div className="inline date-input-field v-center m-5">
                         <div className="v-center">
-                            <input className="date-input" placeholder="00-00-0000" />
+                            <input className="date-input" placeholder="00-00-0000" value={from} onChange={handleChangeFrom} />
                         </div>
                         <div className="v-center">
                             <AiOutlineCalendar />
@@ -37,7 +47,7 @@ const AddExperience = (props: any) => {
                     <div className="v-center"><p>Till</p></div>
                     <div className="inline date-input-field v-center m-5">
                         <div className="v-center">
-                            <input className="date-input" placeholder="00-00-0000" />
+                            <input className="date-input" placeholder="00-00-0000" value={till} onChange={handleChangeTill} />
                         </div>
                         <div className="v-center">
                             <AiOutlineCalendar />
@@ -45,7 +55,7 @@ const AddExperience = (props: any) => {
                     </div>
                 </div>
                 <div className="v-center">
-                    <AddButton onClick={handleAddEducation} />
+                    <AddButton onClick={handleAddExperience} />
                 </div>
             </div>
         </div>
